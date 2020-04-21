@@ -1,10 +1,8 @@
 package ua.lviv.iot.springfirst.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 import java.util.Set;
-
 
 @Entity
 @Table(name = "\"group\"")

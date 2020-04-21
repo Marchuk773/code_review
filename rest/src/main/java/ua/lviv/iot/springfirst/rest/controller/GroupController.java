@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ua.lviv.iot.springfirst.rest.business.GroupService;
 import ua.lviv.iot.springfirst.rest.model.Group;
-
 import java.util.List;
 
 @RequestMapping("/groups")
