@@ -1,7 +1,6 @@
 package ua.lviv.iot.springfirst.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -14,18 +13,10 @@ public class Subject {
 
     private String name;
 
-    /*
-    @JoinTable(name = "User_Achiv", joinColumns = {
-            @JoinColumn(name = "user_id", nullable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "achiv_id",
-                    nullable = false)}) 
-     */
-
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "Student_Subjects",
-            joinColumns = {@JoinColumn(name = "subject_id", nullable = false)},
-            inverseJoinColumns = {@JoinColumn(name = "student_id", nullable = false)}
-    )
+    @JoinTable(name = "Student_Subjects", joinColumns = {
+            @JoinColumn(name = "subject_id", nullable = false) }, inverseJoinColumns = {
+                    @JoinColumn(name = "student_id", nullable = false) })
     @JsonIgnoreProperties("subjects")
     private Set<Student> students;
 

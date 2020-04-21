@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ua.lviv.iot.springfirst.rest.business.SubjectService;
 import ua.lviv.iot.springfirst.rest.model.Subject;
-
 import java.util.List;
 
 @RequestMapping("/subjects")
@@ -17,7 +16,7 @@ public class SubjectController {
     private SubjectService subjectService;
 
     @GetMapping
-    public List<Subject> getAllGroups(){
+    public List<Subject> getAllGroups() {
         return subjectService.findAll();
     }
 
